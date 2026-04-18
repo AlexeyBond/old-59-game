@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci13i42lxwsmo"]
+
+[ext_resource type="Script" uid="uid://cf6ukxo1d8oea" path="res://platform.gd" id="1_mi635"]
+
+[node name="Platform" type="PathFollow2D"]
+script = ExtResource("1_mi635")

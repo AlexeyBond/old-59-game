@@ -15,4 +15,4 @@ position = Vector2(283, 208)
 
 [node name="Exit" parent="." instance=ExtResource("5_72e0p")]
 position = Vector2(1621, 822)
-next_level = "res://lv/lv0.tscn"
+next_level = "res://lv/lv1.tscn"
