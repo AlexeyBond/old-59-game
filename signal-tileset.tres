@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://cq4p8kxgflm3h"]
+
+[ext_resource type="Texture2D" uid="uid://c6r3g0il018f5" path="res://img/c1.svg" id="1_hrewt"]
+[ext_resource type="PackedScene" uid="uid://daylxsa1tmlu5" path="res://signal-button-1.tscn" id="2_kf73n"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kf73n"]
+texture = ExtResource("1_hrewt")
+0:0/0 = 0
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_rpa3i"]
+scenes/1/scene = ExtResource("2_kf73n")
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_kf73n")
+sources/2 = SubResource("TileSetScenesCollectionSource_rpa3i")

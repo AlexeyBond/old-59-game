@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://daylxsa1tmlu5"]
+
+[ext_resource type="Script" uid="uid://c3qwm5ef1tm5r" path="res://signal_button_1.gd" id="1_ngdyd"]
+[ext_resource type="Texture2D" uid="uid://dr8aalw6r1m2e" path="res://img/sq1.svg" id="1_vkkl2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngdyd"]
+size = Vector2(14, 14)
+
+[node name="SignalButton1" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_ngdyd")
+
+[node name="Sq1" type="Sprite2D" parent="."]
+texture = ExtResource("1_vkkl2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ngdyd")
