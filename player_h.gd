@@ -157,7 +157,9 @@ func _try_move_ghost(dir: Vector2i):
 	if ghost_position == null:
 		return
 	if dir in ghost_position.next:
-		_move_ghost(ghost_position.next[dir])
+		var p := ghost_position.next[dir]
+		if p.has_final():
+			_move_ghost(p)
 
 class Position:
 	var world_pos: Vector2
@@ -199,3 +201,10 @@ func _on_playing_state_processing(_delta: float) -> void:
 		_try_move_ghost(Vector2i.LEFT)
 	elif Input.is_action_just_pressed("move_right"):
 		_try_move_ghost(Vector2i.RIGHT)
+
+
+func _on_exiting_state_entered() -> void:
+	if ghost_tween != null:
+		if ghost_tween.is_running():
+			ghost_tween.stop()
+		ghost_tween = null

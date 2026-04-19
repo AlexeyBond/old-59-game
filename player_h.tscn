@@ -100,6 +100,21 @@ _data = {
 &"fade_out": SubResource("Animation_dw050")
 }
 
+[sub_resource type="Animation" id="Animation_3fbyo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ghost:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_6uotq"]
 resource_name = "idle"
 length = 0.4
@@ -115,21 +130,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_3fbyo"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ghost:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m5j14"]
@@ -220,6 +220,7 @@ libraries = {
 [connection signal="state_entered" from="StateChart/state/playing" to="." method="_on_playing_state_entered"]
 [connection signal="state_physics_processing" from="StateChart/state/playing" to="." method="_on_playing_state_physics_processing"]
 [connection signal="state_processing" from="StateChart/state/playing" to="." method="_on_playing_state_processing"]
+[connection signal="state_entered" from="StateChart/state/exiting" to="." method="_on_exiting_state_entered"]
 [connection signal="state_entered" from="StateChart/state/exiting" to="fade_player" method="play" binds= ["fade_out"]]
 [connection signal="state_processing" from="StateChart/state/exiting" to="." method="_on_exiting_state_processing"]
 [connection signal="state_entered" from="StateChart/state/exited" to="." method="_on_exited_state_entered"]

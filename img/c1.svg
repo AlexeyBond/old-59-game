@@ -25,7 +25,7 @@
      inkscape:document-units="px"
      showgrid="true"
      inkscape:zoom="35.620504"
-     inkscape:cx="8.0010097"
+     inkscape:cx="8.0010098"
      inkscape:cy="7.4676091"
      inkscape:window-width="1920"
      inkscape:window-height="1008"
@@ -57,10 +57,10 @@
     <rect
        style="fill:#e8e8e8;fill-opacity:1;stroke:#c2c2c2;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
        id="rect1"
-       width="12"
-       height="12"
-       x="2"
-       y="2"
-       ry="5.9244885" />
+       width="8"
+       height="8"
+       x="4"
+       y="4"
+       ry="3.9525626" />
   </g>
 </svg>
